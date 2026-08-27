@@ -1,5 +1,6 @@
+import ProductManager from "./components/ProductManager/ProductManager"
 
-import ProductSearch from "./components/ProductSearch/ProductSearch"
+
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     <div>
       
         <h1>Product Management System</h1>
-        <ProductSearch/>
+        <ProductManager/>
         
       
 
