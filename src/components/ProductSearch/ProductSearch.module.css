@@ -7,3 +7,7 @@
     justify-content: space-between;
     padding: 5px 15px;
 }
+select{
+    width: 300px;
+    height: 25px;
+}
