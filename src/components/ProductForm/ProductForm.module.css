@@ -1,0 +1,12 @@
+.ProductForm{
+    background-color: cornsilk;
+}
+.form{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    width: 280px;
+    height: 25px;
+}
