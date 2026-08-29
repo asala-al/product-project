@@ -1,9 +1,9 @@
 import Button from "../Button/Button"
-
+import style from './card.module.css'
 
 function Card({name,category,price,image}) {
   return (
-    <div>
+    <div className={style.card}>
     <img src={image} alt="" />
     <h3>{name}</h3>
     <h5>{category}</h5>
