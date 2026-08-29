@@ -1,10 +1,10 @@
 import style from './Button.module.css'
 
-function Button() {
+function Button(props) {
     
   return (
     <div>
-      <button className={style.button}>add</button>
+      <button className={style.button}>{props.Button}</button>
     </div>
   )
 }

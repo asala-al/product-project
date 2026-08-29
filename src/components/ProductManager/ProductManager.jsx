@@ -1,3 +1,5 @@
+
+import Card from "../ProductCard/Card"
 import ProductForm from "../ProductForm/ProductForm"
 import ProductSearch from "../ProductSearch/ProductSearch"
 
@@ -7,6 +9,7 @@ function ProductManager() {
     <div>
       <ProductSearch/>
       <ProductForm/>
+      <Card/>
     </div>
   )
 }
