@@ -1,7 +1,7 @@
 import Button from "../Button/Button"
 import style from './card.module.css'
 
-function Card({name,category,price,image}) {
+function Card({name,category,price,image,}) {
   return (
     <div className={style.card}>
     <img src={image} alt="" />

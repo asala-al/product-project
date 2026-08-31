@@ -3,13 +3,15 @@ import { useState } from 'react'
 import style from './ProductForm.module.css'
 
 
-function ProductForm() {
+function ProductForm({add}) {
 const [name,setName]=useState()
 const [price,setPrice]=useState()
 const [image,setImage]=useState()
 
     function handleSubmit(e) {
         e.preventdefault()
+
+        add([name,price,image])
     }
 
   return (
@@ -19,12 +21,13 @@ const [image,setImage]=useState()
     <div className={style.form}>
       
       <form onSubmit={handleSubmit}>
-        <input type="text" id={name} placeholder="enter product name" onChange={(e)=>setName(e.target.value)}/>
-      <input type="text" id={price} placeholder="enter price" onChange={(e)=>setPrice(e.target.value)}/>
+        <input type="text" value={name} placeholder="enter product name" onChange={(e)=>setName(e.target.value)}/>
+      <input type="number" value={price} placeholder="enter price" onChange={(e)=>setPrice(e.target.value)}/>
       <input type="text" placeholder="select category" onChange={(e)=>(e.target.value)}/>
-      <input type="text" id={image} placeholder="enter image url" onChange={(e)=>setImage(e.target.value)}/>
+      <input type="text" value={image} placeholder="enter image url" onChange={(e)=>setImage(e.target.value)}/>
+      <button type='submit'>Add Product</button>
       </form>
-      <button>Add Product</button>
+      
     </div>
 
     </div>
