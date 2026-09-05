@@ -3,23 +3,25 @@
 import { useState } from "react"
 import ProductForm from "../ProductForm/ProductForm"
 import ProductList from "../ProductList/ProductList"
-import ProductSearch from "../ProductSearch/ProductSearch"
+
 
 
 function ProductManager() {
-    const [products,setProducts]=useState()
+    const [Products,setProducts]=useState([]);
+    console.log(Products);
+    
 
     function addProducts(s) {
-        setProducts([...products,s])
+        setProducts([...Products,s]);
     }
 
 
   return (
     <div>
-      <ProductList />
-      <ProductSearch />
-      <ProductForm add={addProducts} />
       
+      
+      <ProductForm add={addProducts} />
+      <ProductList Products={Products}/>
     </div>
   )
 }

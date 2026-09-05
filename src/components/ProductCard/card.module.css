@@ -1,6 +1,36 @@
+
 .card{
-    width: 400px;
-    height: 200px;
+    width: 420px;
+    height: 180px;
     background-color: pink;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cardInfo {
+    display: flex;
+    margin-block: 3px;
+    
+}
+.cardInfo img{
+    margin: 15px;
+    width: 100px;
+    height: 100px;
+}
+.cardInfo .right{
+    line-height: 1px;
+    margin-top: 7px;
+}
+.cardInfo .right h5{
+    background-color: blue;
+    border-radius: 25px;
+    height: fit-content;
+    width: fit-content;
+    padding: 8px;
+}
+.cardInfo .right h4{
+    color: rgb(113, 224, 113);
 }
