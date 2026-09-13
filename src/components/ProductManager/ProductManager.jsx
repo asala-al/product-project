@@ -15,12 +15,11 @@ function ProductManager() {
     //     setProducts({...s,id:Date.now(),});
     // }
     function addProducts(s) {
-  const newProduct = {
-    ...s,
-    id: Date.now(),
-  };
+  // const newProduct = {
+  //   ...Products,s
+  // }
 
-  setProducts([...Products, newProduct]);
+  setProducts([...Products, s]);
 }
 
     function deleteProduct(id) {

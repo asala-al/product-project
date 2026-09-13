@@ -3,6 +3,8 @@ import style from "./card.module.css";
 
 function Card({ Product, deleteProduct}) {
 
+console.log(Product.id);
+console.log(Product);
 
   return (
 

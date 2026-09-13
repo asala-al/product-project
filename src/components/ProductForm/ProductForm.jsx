@@ -10,15 +10,15 @@ function ProductForm({ add }) {
   const [image, setImage] = useState("");
   const [count,setCount]=useState(0)
   const [product,setProduct]=useState()
-  
+  const [id,setId]=useState(Date.now)
  
   function handleSubmit(e) {
     e.preventDefault();
     
     setCount(count+1)
-     
+    setId(Date.now)
     add({
-      id : count,
+      id : id ,
       name: name,
       price: price,
       category: category,
