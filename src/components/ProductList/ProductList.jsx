@@ -3,7 +3,7 @@ import Card from "../ProductCard/Card"
 
 
 
-function ProductList({Products}) {
+function ProductList({Products,deleteProduct}) {
     console.log(Products);
     
     
@@ -11,7 +11,7 @@ function ProductList({Products}) {
     <div>
         {
             Products.map((Product)=>(
-                <Card key={Product.id} Product={Product} />
+                <Card key={Product.id} Product={Product} deleteProduct={deleteProduct}/>
             ))
         }
 

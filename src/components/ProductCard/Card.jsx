@@ -1,12 +1,17 @@
 import Button from "../Button/Button";
 import style from "./card.module.css";
 
-function Card({ Product}) {
+function Card({ Product, deleteProduct}) {
+
+
   return (
+
     <div className={style.cardo}>
       <div className={style.card}>
         <div className={style.cardInfo}>
           <img src={Product.image} alt="" />
+
+ 
 
           <div className={style.right}>
             <h3>{Product.name}</h3>
@@ -16,8 +21,8 @@ function Card({ Product}) {
         </div>
 
         <div className={style.button}>
-          <Button Button="Favourite"/>
-          <Button Button="Delete"/>
+          <Button Button="Favourite" />
+          <Button onclick={() => deleteProduct(Product.id)} Button="Delete" />
         </div>
       </div>
     </div>

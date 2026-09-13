@@ -3,20 +3,22 @@ import style from "./ProductForm.module.css";
 
 
 function ProductForm({ add }) {
+  
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
   const [count,setCount]=useState(0)
-
   const [product,setProduct]=useState()
   
-  
+ 
   function handleSubmit(e) {
     e.preventDefault();
     
-    
+    setCount(count+1)
+     
     add({
+      id : count,
       name: name,
       price: price,
       category: category,
@@ -24,7 +26,7 @@ function ProductForm({ add }) {
     });
   }
   
-  
+  console.log(category);
 
   return (
     <div>
@@ -34,7 +36,7 @@ function ProductForm({ add }) {
       
       <select  value={product} onChange={(e)=>setProduct(e.target.value)}>
         <option value="" >all category</option>
-        <option value="clothes">clothes</option>
+        <option  value="clothes">clothes</option>
         <option value="electronics">electronics</option>
         <option value="books">books</option>
         <option value="accessories">accessories</option>
@@ -59,19 +61,29 @@ function ProductForm({ add }) {
               placeholder="enter price"
               onChange={(e) => setPrice(e.target.value)}
             />
-            <input
+            {/* <input
               type="text"
               value={category}
               placeholder="select category"
               onChange={(e) => setCategory(e.target.value)}
-            />
+            /> */}
+            
+            <select   value={category} onChange={(e)=>setCategory(e.target.value)}>
+            <option value="" >all category</option>
+            <option  value="clothes">clothes</option>
+            <option value="electronics">electronics</option>
+            <option value="books">books</option>
+            <option value="accessories">accessories</option>
+            <option value="shoes">shoes</option>
+            </select>
+
             <input
               type="text"
               value={image}
               placeholder="enter image url"
               onChange={(e) => setImage(e.target.value)}
             />
-            <button type="submit" onClick={()=>{setCount(count+1)}}>Add Product</button>
+            <button type="submit">Add Product</button>
           </form>
         </div>
       </div>

@@ -1,13 +1,13 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import style from './Button.module.css'
 
 
 function Button(props) {
-    const [isFavourite,setIsFavourite]=useState(false)
+    // const [isFavourite,setIsFavourite]=useState(false)
   return (
     <div > 
-      <button className={style.button} onClick={()=>{setIsFavourite(!isFavourite)}}>
-        {isFavourite==false? '' : "" }   {props.Button}</button>
+      <button className={style.button} onClick={props.onClick}>
+           {props.Button}</button>
     </div>
   )
 }
