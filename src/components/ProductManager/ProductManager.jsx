@@ -10,6 +10,7 @@ function ProductManager() {
     const [Products,setProducts]=useState([]);
     console.log(Products);
     
+    
 
     // function addProducts(s) {
     //     setProducts({...s,id:Date.now(),});
@@ -23,9 +24,13 @@ function ProductManager() {
 }
 
     function deleteProduct(id) {
-      setProducts(Products.filter((product)=>product.id !== id))
+      setProducts(Products.filter((Product)=>Product.id !== id))
     }
-
+    // console.log(deleteProduct);
+    
+    
+    
+    
   return (
     <div>
       

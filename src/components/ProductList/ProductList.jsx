@@ -6,7 +6,7 @@ import style from "./ProductList.module.css"
 function ProductList({Products,deleteProduct}) {
     console.log(Products);
     
-    console.log();
+    
     
     
   return (

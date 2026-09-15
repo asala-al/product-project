@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from "./ProductForm.module.css";
 
 
-function ProductForm({ add }) {
+function ProductForm({ add}) {
   
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -24,7 +24,12 @@ function ProductForm({ add }) {
       category: category,
       image: image,
     });
+
+    
+    
   }
+  
+  // console.log(product);
   
   console.log(category);
 

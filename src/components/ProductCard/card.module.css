@@ -9,6 +9,10 @@
 .button{
     display: flex;
     justify-content: space-evenly;
+    
+}
+button{
+    background-color: aqua;
 }
 .cardInfo {
     display: flex;
