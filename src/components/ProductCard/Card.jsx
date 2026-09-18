@@ -18,16 +18,16 @@ console.log();
  
 
           <div className={style.right}>
-            <h3>{Product.name}</h3>
-            <h5>{Product.category}</h5>
-            <h4>{Product.price}</h4>
+            <h2>{Product.name}</h2>
+            <h4>{Product.category}</h4>
+            <h3>{Product.price}</h3>
           </div>
         </div>
 
         <div className={style.button}>
           <Button Button="Favourite" />
-          {/* <Button onclick={()=>deleteProduct(Product.id)} Button="Delete" /> */}
-          <button onClick={()=>deleteProduct(Product.id)}>delete</button>
+          <Button onClick={()=>deleteProduct(Product.id)} Button="Delete" />
+          {/* <button onClick={()=>deleteProduct(Product.id)}>delete</button> */}
         </div>
       </div>
     </div>

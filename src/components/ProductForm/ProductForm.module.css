@@ -1,17 +1,29 @@
 .ProductForm{
+    height: 100px;
+    
     background-color: cornsilk;
 }
 .form{
     display: flex;
     justify-content: space-between;
-    
-    /* align-items: center; */
+    align-items: center;
 }
 input{
-    
+    margin-inline: 10px;
     width: 280px;
     height: 25px;
+    
+    /* background-color: rgb(224, 217, 217); */
 }
+select{
+    
+}
+/* .label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+} */
 button{
        width: 110px;
     height: 30px;

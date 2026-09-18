@@ -1,18 +1,22 @@
 
 .card{
-    width: 420px;
-    height: 180px;
-    background-color: pink;
+    width: 440px;
+    height: 200px;
+    background-color: rgb(253, 249, 250);
     margin-top: 10px;
+    border-radius: 5px;
+    border: 1px rgb(180, 180, 177) solid;
 }
 
 .button{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    
     
 }
 button{
-    background-color: aqua;
+    background-color: rgb(55, 41, 250);
+    color: white;
 }
 .cardInfo {
     display: flex;
@@ -21,20 +25,23 @@ button{
 }
 .cardInfo img{
     margin: 15px;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
 }
 .cardInfo .right{
-    line-height: 1px;
-    margin-top: 7px;
-}
-.cardInfo .right h5{
-    background-color: blue;
-    border-radius: 25px;
-    height: fit-content;
-    width: fit-content;
-    padding: 8px;
+    line-height: 15px;
+    margin-top: 0px;
+    
 }
 .cardInfo .right h4{
-    color: rgb(113, 224, 113);
+    background-color: rgb(234, 234, 238);
+    border-radius: 25px;
+    color: rgb(111, 111, 221);
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+}
+.cardInfo .right h3{
+    color: rgb(47, 223, 47);
 }

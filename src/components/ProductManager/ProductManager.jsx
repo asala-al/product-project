@@ -8,6 +8,7 @@ import ProductList from "../ProductList/ProductList"
 
 function ProductManager() {
     const [Products,setProducts]=useState([]);
+    
     console.log(Products);
     
     
@@ -25,6 +26,7 @@ function ProductManager() {
 
     function deleteProduct(id) {
       setProducts(Products.filter((Product)=>Product.id !== id))
+      
     }
     // console.log(deleteProduct);
     
@@ -35,7 +37,7 @@ function ProductManager() {
     <div>
       
       
-      <ProductForm add={addProducts} />
+      <ProductForm add={addProducts} deleteProduct={deleteProduct}/>
       <ProductList Products={Products} deleteProduct={deleteProduct}/>
     </div>
   )
