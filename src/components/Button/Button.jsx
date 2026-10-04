@@ -2,12 +2,15 @@
 import style from './Button.module.css'
 
 
-function Button(props) {
+function Button({children,onClick}) {
     // const [isFavourite,setIsFavourite]=useState(false)
+
   return (
     <div > 
-      <button className={style.button} onClick={props.onClick}>
-           {props.Button}</button>
+
+      <button className={style.button} onClick={onClick}>
+        {children}</button>
+
     </div>
   )
 }

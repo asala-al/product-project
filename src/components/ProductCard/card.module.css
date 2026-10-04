@@ -1,47 +1,44 @@
-
-.card{
-    width: 440px;
-    height: 200px;
-    background-color: rgb(253, 249, 250);
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px rgb(180, 180, 177) solid;
+.card {
+  width: 440px;
+  height: 200px;
+  background-color: rgb(253, 249, 250);
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px rgb(180, 180, 177) solid;
 }
 
-.button{
-    display: flex;
-    justify-content: space-around;
-    
-    
+.button {
+  display: flex;
+  justify-content: space-around;
 }
-button{
-    background-color: rgb(55, 41, 250);
-    color: white;
+
+button {
+  background-color: rgb(55, 41, 250);
+  color: white;
 }
+
 .cardInfo {
-    display: flex;
-    margin-block: 3px;
-    
+  display: flex;
+  margin-block: 3px;
 }
-.cardInfo img{
-    margin: 15px;
-    width: 120px;
-    height: 120px;
-    border-radius: 5px;
+.cardInfo img {
+  margin: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
 }
-.cardInfo .right{
-    line-height: 15px;
-    margin-top: 0px;
-    
+.cardInfo .right {
+  line-height: 15px;
+  margin-top: 0px;
 }
-.cardInfo .right h4{
-    background-color: rgb(234, 234, 238);
-    border-radius: 25px;
-    color: rgb(111, 111, 221);
-    height: fit-content;
-    width: fit-content;
-    padding: 5px;
+.cardInfo .right h4 {
+  background-color: rgb(234, 234, 238);
+  border-radius: 25px;
+  color: rgb(111, 111, 221);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
 }
-.cardInfo .right h3{
-    color: rgb(47, 223, 47);
+.cardInfo .right h3 {
+  color: rgb(47, 223, 47);
 }

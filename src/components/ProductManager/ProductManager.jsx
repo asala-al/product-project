@@ -1,46 +1,27 @@
-
-
-import { useState } from "react"
-import ProductForm from "../ProductForm/ProductForm"
-import ProductList from "../ProductList/ProductList"
-
-
+import { useState } from "react";
+import ProductForm from "../ProductForm/ProductForm";
+import ProductList from "../ProductList/ProductList";
 
 function ProductManager() {
-    const [Products,setProducts]=useState([]);
-    
-    console.log(Products);
-    
-    
+  const [Products, setProducts] = useState([]);
 
-    // function addProducts(s) {
-    //     setProducts({...s,id:Date.now(),});
-    // }
-    function addProducts(s) {
-  // const newProduct = {
-  //   ...Products,s
-  // }
+  console.log(Products);
 
-  setProducts([...Products, s]);
-}
+  function addProducts(s) {
+    setProducts([...Products, s]);
+  }
 
-    function deleteProduct(id) {
-      setProducts(Products.filter((Product)=>Product.id !== id))
-      
-    }
-    // console.log(deleteProduct);
-    
-    
-    
-    
+  function deleteProduct(id) {
+    setProducts(Products.filter((Product) => Product.id !== id));
+  }
+  // console.log(deleteProduct);
+
   return (
     <div>
-      
-      
-      <ProductForm add={addProducts} deleteProduct={deleteProduct}/>
-      <ProductList Products={Products} deleteProduct={deleteProduct}/>
+      <ProductForm add={addProducts} deleteProduct={deleteProduct} Products={Products}/>
+      <ProductList Products={Products} deleteProduct={deleteProduct} />
     </div>
-  )
+  );
 }
 
-export default ProductManager
+export default ProductManager;

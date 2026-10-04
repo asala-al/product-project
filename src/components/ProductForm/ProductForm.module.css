@@ -13,11 +13,9 @@ input{
     width: 280px;
     height: 25px;
     
-    /* background-color: rgb(224, 217, 217); */
-}
-select{
     
 }
+
 /* .label{
     display: flex;
     flex-direction: column;

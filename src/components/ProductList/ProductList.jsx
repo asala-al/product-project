@@ -1,24 +1,20 @@
-import Card from "../ProductCard/Card"
-import style from "./ProductList.module.css"
+import Card from "../ProductCard/Card";
+import style from "./ProductList.module.css";
 
+function ProductList({ Products, deleteProduct }) {
+  console.log(Products);
 
-
-function ProductList({Products,deleteProduct}) {
-    console.log(Products);
-    
-    
-    
-    
   return (
     <div className={style.list}>
-        {
-            Products.map((Product)=>(
-                <Card key={Product.id} Product={Product} deleteProduct={deleteProduct}/>
-            ))
-        }
-
+      {Products.map((Product) => (
+        <Card
+          key={Product.id}
+          Product={Product}
+          deleteProduct={deleteProduct}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
-export default ProductList
+export default ProductList;
