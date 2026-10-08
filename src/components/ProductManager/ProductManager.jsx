@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProductForm from "../ProductForm/ProductForm";
 import ProductList from "../ProductList/ProductList";
 import Search from "../Search";
+import ProductCategory from "../ProductCategory";
 // import ProductSearch from "../productSearch/productSearch";
 // import ProductCount from "../productCount/productCount";
 
@@ -9,6 +10,7 @@ function ProductManager() {
   const [Products, setProducts] = useState([]);
   // const [count, setCount] = useState(0);
   const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("");
   console.log(Products);
 
   function addProducts(s) {
@@ -30,17 +32,20 @@ function ProductManager() {
       }),
     );
   }
+    
+  const filteredProducts = Products.filter((product) =>{
+    return(
+    product.name.toLowerCase().includes(search.toLowerCase())
+        && (category === "" || product.category === category)
+  )})
+        
 
-  const filteredProducts = Products.filter((product) =>product.name.toLowerCase().includes(search.toLowerCase()))
 
-  // function productCount() {
-
-  // }
   return (
     <div>
       <Search setSearch={setSearch}/>
       {/* <ProductCount count={Products.length} /> */}
-      {/* <ProductSearch setSearch={setSearch} /> */}
+      <ProductCategory setCategory={setCategory} category={category}/>
       <ProductForm
         add={addProducts}
         deleteProduct={deleteProduct}

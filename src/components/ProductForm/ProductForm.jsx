@@ -1,13 +1,13 @@
 import { useState } from "react";
 import style from "./ProductForm.module.css";
-import ProductCount from "../productCount/productCount";
+// import ProductCount from "../productCount/productCount";
 
 function ProductForm({ add }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
-  const [product, setProduct] = useState();
+
 
   const [id, setId] = useState(Date.now);
   const [isFavourite, setIsFavourite] = useState(false);
@@ -41,14 +41,7 @@ function ProductForm({ add }) {
       <div className={style.ProductSearch}>
         {/* <ProductCount  counts={counts}/> */}
 
-        <select value={product} onChange={(e) => setProduct(e.target.value)}>
-          <option value="">all category</option>
-          <option value="clothes">clothes</option>
-          <option value="electronics">electronics</option>
-          <option value="books">books</option>
-          <option value="accessories">accessories</option>
-          <option value="shoes">shoes</option>
-        </select>
+        
       </div>
 
       <div className={style.ProductForm}>
