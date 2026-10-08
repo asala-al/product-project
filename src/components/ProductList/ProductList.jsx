@@ -1,7 +1,7 @@
 import Card from "../ProductCard/Card";
 import style from "./ProductList.module.css";
 
-function ProductList({ Products, deleteProduct }) {
+function ProductList({ Products, deleteProduct ,fav }) {
   console.log(Products);
 
   return (
@@ -11,6 +11,7 @@ function ProductList({ Products, deleteProduct }) {
           key={Product.id}
           Product={Product}
           deleteProduct={deleteProduct}
+          fav={fav}
         />
       ))}
     </div>

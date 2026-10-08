@@ -1,7 +1,7 @@
-import Button from "../Button/Button";
-import style from "./card.module.css";
 
-function Card({ Product, deleteProduct}) {
+import style from "./card.module.css";
+// `${}`
+function Card({ Product, deleteProduct,fav}) {
   console.log(Product.id);
   // console.log(Product);
   // console.log(deleteProduct);
@@ -21,8 +21,9 @@ function Card({ Product, deleteProduct}) {
         </div>
 
         <div className={style.button}>
-          <Button  Button="Favourite" />
-          <Button  onClick={() => deleteProduct(Product.id)} Button="Delete" />
+          <button onClick={()=>fav(Product.id)}>fav </button>
+          <p>favourite : {Product.isFavourite ? "yes" : "no" }</p> 
+          <button onClick={() => deleteProduct(Product.id)}>delete</button>
           {/* <button onClick={()=>deleteProduct(Product.id)}>delete</button> */}
         </div>
       </div>

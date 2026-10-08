@@ -1,20 +1,21 @@
 import { useState } from "react";
 import style from "./ProductForm.module.css";
+import ProductCount from "../productCount/productCount";
 
-function ProductForm({ add, deleteProduct, Products }) {
+function ProductForm({ add }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
-  const [count, setCount] = useState(0);
   const [product, setProduct] = useState();
+
   const [id, setId] = useState(Date.now);
+  const [isFavourite, setIsFavourite] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    setCount(Products.length);
-    deleteProduct(setCount[Products.length-1]);
+    // deleteProduct(setCount[Products.length-1]);
     setId(Date.now);
     add({
       id: id,
@@ -22,21 +23,23 @@ function ProductForm({ add, deleteProduct, Products }) {
       price: price,
       category: category,
       image: image,
+      isFavourite: isFavourite,
       // count: count
     });
-
-    console.log(count);
   }
+  // function counts() {
+  //
 
+  //   }
   // console.log(product);
 
   console.log(category);
 
   return (
     <div>
+      {/* <ProductSearch /> */}
       <div className={style.ProductSearch}>
-        <h3>total product : {count}</h3>
-        <input type="search" name="" id="" placeholder="search product..." />
+        {/* <ProductCount  counts={counts}/> */}
 
         <select value={product} onChange={(e) => setProduct(e.target.value)}>
           <option value="">all category</option>

@@ -1,10 +1,14 @@
 import { useState } from "react";
 import ProductForm from "../ProductForm/ProductForm";
 import ProductList from "../ProductList/ProductList";
+import Search from "../Search";
+// import ProductSearch from "../productSearch/productSearch";
+// import ProductCount from "../productCount/productCount";
 
 function ProductManager() {
   const [Products, setProducts] = useState([]);
-
+  // const [count, setCount] = useState(0);
+  const [search, setSearch] = useState("");
   console.log(Products);
 
   function addProducts(s) {
@@ -12,14 +16,41 @@ function ProductManager() {
   }
 
   function deleteProduct(id) {
-    setProducts(Products.filter((Product) => Product.id !== id));
+    setProducts((s) => s.filter((Product) => Product.id !== id));
   }
-  // console.log(deleteProduct);
+  function favourite(id) {
+    setProducts((s) =>
+      s.map((product) => {
+        if (product.id === id) {
+          return {
+            ...product,
+            isFavourite: !product.isFavourite,
+          };
+        } else return product;
+      }),
+    );
+  }
 
+  const filteredProducts = Products.filter((product) =>product.name.toLowerCase().includes(search.toLowerCase()))
+
+  // function productCount() {
+
+  // }
   return (
     <div>
-      <ProductForm add={addProducts} deleteProduct={deleteProduct} Products={Products}/>
-      <ProductList Products={Products} deleteProduct={deleteProduct} />
+      <Search setSearch={setSearch}/>
+      {/* <ProductCount count={Products.length} /> */}
+      {/* <ProductSearch setSearch={setSearch} /> */}
+      <ProductForm
+        add={addProducts}
+        deleteProduct={deleteProduct}
+        Products={Products}
+      />
+      <ProductList
+        Products={filteredProducts}
+        deleteProduct={deleteProduct}
+        fav={favourite}
+      />
     </div>
   );
 }
