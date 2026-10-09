@@ -8,7 +8,6 @@ function ProductForm({ add }) {
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
 
-
   const [id, setId] = useState(Date.now);
   const [isFavourite, setIsFavourite] = useState(false);
 
@@ -40,8 +39,6 @@ function ProductForm({ add }) {
       {/* <ProductSearch /> */}
       <div className={style.ProductSearch}>
         {/* <ProductCount  counts={counts}/> */}
-
-        
       </div>
 
       <div className={style.ProductForm}>

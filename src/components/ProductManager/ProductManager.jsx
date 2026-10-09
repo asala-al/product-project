@@ -3,8 +3,7 @@ import ProductForm from "../ProductForm/ProductForm";
 import ProductList from "../ProductList/ProductList";
 import Search from "../Search";
 import ProductCategory from "../ProductCategory";
-// import ProductSearch from "../productSearch/productSearch";
-// import ProductCount from "../productCount/productCount";
+import Counting from "../Counting";
 
 function ProductManager() {
   const [Products, setProducts] = useState([]);
@@ -15,6 +14,7 @@ function ProductManager() {
 
   function addProducts(s) {
     setProducts([...Products, s]);
+    // setCount(Products.length)
   }
 
   function deleteProduct(id) {
@@ -32,20 +32,20 @@ function ProductManager() {
       }),
     );
   }
-    
-  const filteredProducts = Products.filter((product) =>{
-    return(
-    product.name.toLowerCase().includes(search.toLowerCase())
-        && (category === "" || product.category === category)
-  )})
-        
 
+  const filteredProducts = Products.filter((product) => {
+    return (
+      product.name.toLowerCase().includes(search.toLowerCase()) &&
+      (category === "" || product.category === category)
+    );
+  });
 
   return (
     <div>
-      <Search setSearch={setSearch}/>
-      {/* <ProductCount count={Products.length} /> */}
-      <ProductCategory setCategory={setCategory} category={category}/>
+      <Counting count={filteredProducts.length} />
+      <Search setSearch={setSearch} />
+
+      <ProductCategory setCategory={setCategory} category={category} />
       <ProductForm
         add={addProducts}
         deleteProduct={deleteProduct}

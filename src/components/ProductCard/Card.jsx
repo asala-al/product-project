@@ -22,6 +22,7 @@ function Card({ Product, deleteProduct,fav}) {
 
         <div className={style.button}>
           <button onClick={()=>fav(Product.id)}>fav </button>
+          
           <p>favourite : {Product.isFavourite ? "yes" : "no" }</p> 
           <button onClick={() => deleteProduct(Product.id)}>delete</button>
           {/* <button onClick={()=>deleteProduct(Product.id)}>delete</button> */}

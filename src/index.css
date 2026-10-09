@@ -1,1 +1,33 @@
-
+/* product form */
+.ProductForm{
+    height: 100px;
+    
+    background-color: cornsilk;
+}
+.form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    margin-inline: 10px;
+    width: 280px;
+    height: 25px;
+}
+/* product list */
+.list{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+/* search */
+/* .ProductSearch{
+    
+    height: 60px;
+    background-color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+} */

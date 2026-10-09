@@ -1,6 +1,5 @@
-.ProductForm{
+/* .ProductForm{
     height: 100px;
-    
     background-color: cornsilk;
 }
 .form{
@@ -12,33 +11,30 @@ input{
     margin-inline: 10px;
     width: 280px;
     height: 25px;
-    
-    
-}
+} */
 
 /* .label{
     display: flex;
     flex-direction: column;
     gap: 5px;
-
 } */
 button{
        width: 110px;
     height: 30px;
-    background-color: blue;
+    background-color: rgb(17, 17, 80);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-.ProductSearch{
-    /* width: 1320px; */
+/* .ProductSearch{
+    
     height: 60px;
     background-color: cornflowerblue;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 15px;
-}
+} */
 select{
     width: 300px;
     height: 25px;
