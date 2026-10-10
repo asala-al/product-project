@@ -3,7 +3,7 @@
 function ProductCategory({category,setCategory}) {
       
   return (
-    <div>
+    <div className="category">
       <select value={category} onChange={(e) => setCategory(e.target.value)}>
                 <option value="">all category</option>
                 <option value="clothes">clothes</option>

@@ -41,11 +41,12 @@ function ProductManager() {
   });
 
   return (
-    <div>
-      <Counting count={filteredProducts.length} />
+    <div className="manager">
+      <div className="searching">
+        <Counting count={filteredProducts.length} />
       <Search setSearch={setSearch} />
-
       <ProductCategory setCategory={setCategory} category={category} />
+      </div>
       <ProductForm
         add={addProducts}
         deleteProduct={deleteProduct}

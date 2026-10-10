@@ -35,64 +35,56 @@ function ProductForm({ add }) {
   console.log(category);
 
   return (
-    <div>
-      {/* <ProductSearch /> */}
-      <div className={style.ProductSearch}>
-        {/* <ProductCount  counts={counts}/> */}
-      </div>
+    <div className="productform">
+      <h3>Add New Product</h3>
+        <form onSubmit={handleSubmit}>
+          {/* <label htmlFor="">Product Name</label> */}
+          <input
+            type="text"
+            value={name}
+            placeholder="enter product name"
+            onChange={(e) => setName(e.target.value)}
+          />
 
-      <div className={style.ProductForm}>
-        <h3>Add New Product</h3>
-        <div className={style.form}>
-          <form onSubmit={handleSubmit}>
-            {/* <label htmlFor="">Product Name</label> */}
-            <input
-              type="text"
-              value={name}
-              placeholder="enter product name"
-              onChange={(e) => setName(e.target.value)}
-            />
+          {/* <label htmlFor="">price($)</label> */}
+          <input
+            type="number"
+            value={price}
+            placeholder="enter price"
+            onChange={(e) => setPrice(e.target.value)}
+          />
 
-            {/* <label htmlFor="">price($)</label> */}
-            <input
-              type="number"
-              value={price}
-              placeholder="enter price"
-              onChange={(e) => setPrice(e.target.value)}
-            />
-
-            {/* <input
+          {/* <input
               type="text"
               value={category}
               placeholder="select category"
               onChange={(e) => setCategory(e.target.value)}
             /> */}
 
-            {/* <label htmlFor="">Category</label> */}
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option value="">all category</option>
-              <option value="clothes">clothes</option>
-              <option value="electronics">electronics</option>
-              <option value="books">books</option>
-              <option value="accessories">accessories</option>
-              <option value="shoes">shoes</option>
-            </select>
+          {/* <label htmlFor="">Category</label> */}
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="">all category</option>
+            <option value="clothes">clothes</option>
+            <option value="electronics">electronics</option>
+            <option value="books">books</option>
+            <option value="accessories">accessories</option>
+            <option value="shoes">shoes</option>
+          </select>
 
-            {/* <label htmlFor="image">Image URL</label> */}
-            <input
-              type="text"
-              value={image}
-              placeholder="enter image url"
-              onChange={(e) => setImage(e.target.value)}
-            />
+          {/* <label htmlFor="image">Image URL</label> */}
+          <input
+            type="text"
+            value={image}
+            placeholder="enter image url"
+            onChange={(e) => setImage(e.target.value)}
+          />
 
-            <button type="submit">Add Product</button>
-          </form>
-        </div>
-      </div>
+          <button type="submit">Add Product</button>
+        </form>
+      
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import Card from "../ProductCard/Card";
-import style from "./ProductList.module.css";
+
 
 function ProductList({ Products, deleteProduct ,fav }) {
   console.log(Products);
 
   return (
-    <div className={style.list}>
+    <div className="list">
       {Products.map((Product) => (
         <Card
           key={Product.id}

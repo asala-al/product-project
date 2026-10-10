@@ -7,23 +7,27 @@
   border: 1px rgb(180, 180, 177) solid;
 }
 
-.button {
+/* .button {
   display: flex;
   justify-content: space-around;
-}
-button {
-  width: 190px;
-  height: 35px;
-  border: 1px solid rgb(141, 141, 141);
-  border-radius: 5px;
-  background-color: white;
-  color: rgb(0, 0, 0);
-}
+  gap: 20px;
+} */
+ 
 
 
+.isfavourite{
+    border: 1px solid grey;
+
+}
+.favouriteActive{
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+}
 .cardInfo {
   display: flex;
   margin-block: 3px;
+  
 }
 .cardInfo img {
   margin: 15px;

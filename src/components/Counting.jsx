@@ -2,7 +2,7 @@
 
 function Counting({count}) {
   return (
-    <div>
+    <div className="counting">
       <h3>total product : {count}</h3>
     </div>
   )
