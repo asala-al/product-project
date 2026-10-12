@@ -24,29 +24,7 @@
     background-color: red;
     color: white;
 }
-.cardInfo {
-  display: flex;
-  margin-block: 3px;
-  
-}
-.cardInfo img {
-  margin: 15px;
-  width: 120px;
-  height: 120px;
-  border-radius: 5px;
-}
-.cardInfo .right {
-  line-height: 15px;
-  margin-top: 0px;
-}
-.cardInfo .right h4 {
-  background-color: rgb(234, 234, 238);
-  border-radius: 25px;
-  color: rgb(111, 111, 221);
-  height: fit-content;
-  width: fit-content;
-  padding: 5px;
-}
-.cardInfo .right h3 {
-  color: rgb(47, 223, 47);
+.clothes{
+   background-color: #ede9fe;
+  color: #7c3aed;
 }

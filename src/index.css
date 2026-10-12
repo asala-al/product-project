@@ -9,6 +9,7 @@
   margin: 10px 10px;
   border: 1px solid rgb(201, 197, 197);
   border-radius: 5px;
+  
 }
 .productform h3 {
   background-color: white;
@@ -37,13 +38,15 @@ form button {
   color: white;
   border: 0cap;
   cursor: pointer;
+  margin-top: 25px;
 }
 input {
   margin-inline: 10px;
   width: 270px;
   height: 25px;
   padding: 5px;
-  background-color: white;
+  /* background-color: white; */
+   background-color: rgb(248, 245, 245);
   border: 1px solid rgb(201, 197, 197);
   border-radius: 5px;
 }
@@ -53,9 +56,20 @@ select {
   width: 270px;
   height: 35px;
   padding: 7px;
-  background-color: white;
+  /* background-color: white; */
+  background-color: rgb(248, 245, 245);
   border: 1px solid rgb(201, 197, 197);
   border-radius: 5px;
+}
+.labels{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.labels label{
+  margin-left: 15px;
+  margin-bottom: 10px;
+  background-color: white;
 }
 /* product list */
 .list {
@@ -75,6 +89,7 @@ select {
   margin: 10px 10px;
   border: 1px solid rgb(201, 197, 197);
   border-radius: 5px;
+  /* box-shadow: 2px 1px  10px 1px rgb(197, 192, 192); */
 }
 .ProductSearch {
   height: 60px;
@@ -82,18 +97,52 @@ select {
   align-items: center;
   background-color: white;
 }
+.ProductSearch input{
+  width: 350px;
+  height: 35px;
+}
 /* category */
-.category {
-  background-color: white;
+/* .category {
+  background-color: white; */
+  .category {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
 }
 .category select {
   margin-inline: 10px;
   width: 270px;
   height: 35px;
   padding: 5px;
-  background-color: white;
+  /* background-color: white; */
+   background-color: rgb(248, 245, 245);
   border: 1px solid rgb(201, 197, 197);
   border-radius: 5px;
+}
+.clothes{
+   background-color: #ede9fe;
+  color: #7c3aed;
+}
+.books {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.accessories {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+
+.shoes {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+.electronics {
+  background-color: #dbeafe;
+  color: #2563eb;
 }
 /* list */
 .list {
@@ -103,6 +152,17 @@ select {
   flex-wrap: wrap;
   margin: 15px;
 }
+.noProducts{
+   
+  margin-top: 30px;
+  padding: 30px;
+  margin-inline: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  color: #777;
+}
+
 /* card */
 .cardButtons{
     display: flex;
@@ -121,3 +181,38 @@ select {
     border: 1px solid red;
     color: red;
 }
+.cardInfo {
+  display: flex;
+  margin-block: 3px;
+  
+}
+.cardInfo img {
+  margin: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+}
+.cardInfo .right {
+  line-height: 15px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 15px;
+}
+/* .cardInfo .right h4 {
+  background-color: rgb(234, 234, 238);
+  border-radius: 25px;
+  color: rgb(111, 111, 221);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+} */
+.cardInfo .right h3 {
+  color: rgb(13, 133, 13);
+}
+/* count */
+.counting h3{
+  background-color: white;
+}
+

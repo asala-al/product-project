@@ -52,11 +52,22 @@ function ProductManager() {
         deleteProduct={deleteProduct}
         Products={Products}
       />
-      <ProductList
+      {/* <ProductList
         Products={filteredProducts}
         deleteProduct={deleteProduct}
         fav={favourite}
-      />
+      /> */}
+      {filteredProducts.length === 0 ? (
+  <div className="noProducts">
+    <h3>No Products Found</h3>
+  </div>
+) : (
+  <ProductList
+    Products={filteredProducts}
+    deleteProduct={deleteProduct}
+    fav={favourite}
+  />
+)}
     </div>
   );
 }

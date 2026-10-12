@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./ProductForm.module.css";
+
 // import ProductCount from "../productCount/productCount";
 
 function ProductForm({ add }) {
@@ -38,21 +38,25 @@ function ProductForm({ add }) {
     <div className="productform">
       <h3>Add New Product</h3>
         <form onSubmit={handleSubmit}>
-          {/* <label htmlFor="">Product Name</label> */}
+          <div className="labels">
+            <label htmlFor="">Product Name</label>
           <input
             type="text"
             value={name}
             placeholder="enter product name"
             onChange={(e) => setName(e.target.value)}
           />
+          </div>
 
-          {/* <label htmlFor="">price($)</label> */}
+          <div className="labels">
+            <label htmlFor="">price($)</label>
           <input
             type="number"
             value={price}
             placeholder="enter price"
             onChange={(e) => setPrice(e.target.value)}
           />
+          </div>
 
           {/* <input
               type="text"
@@ -61,7 +65,8 @@ function ProductForm({ add }) {
               onChange={(e) => setCategory(e.target.value)}
             /> */}
 
-          {/* <label htmlFor="">Category</label> */}
+          <div className="labels">
+            <label htmlFor="">Category</label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
@@ -73,14 +78,17 @@ function ProductForm({ add }) {
             <option value="accessories">accessories</option>
             <option value="shoes">shoes</option>
           </select>
+          </div>
 
-          {/* <label htmlFor="image">Image URL</label> */}
+          <div className="labels">
+            <label htmlFor="image">Image URL</label>
           <input
             type="text"
             value={image}
             placeholder="enter image url"
             onChange={(e) => setImage(e.target.value)}
           />
+          </div>
 
           <button type="submit">Add Product</button>
         </form>
